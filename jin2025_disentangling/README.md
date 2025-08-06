@@ -22,22 +22,21 @@ The paper introduces a method to **disentangle memory (factual retrieval)** and 
 ## Directory structure
 
 .
-├── README.md                         
-├── load_data/                        
-│   ├── data_agent.py               # Generates the memory step and the reason step naturally without order 
-│   ├── data_agent_order.py         # Generate the memory step and then generate the reason step
-│   ├── k_shot_dataset.py           # Wraps datasets for k-shot in-context learning (demo-based prompting)
-│   ├── preprocess.py               # Converts raw datasets into question/answer + CoT step formats
-│   ├── supervised_dataset.py       # Prepares dataset and collator for standard supervised fine-tuning
-    ├── constant_len_dataset.py     # Converts dataset into fixed-length token sequences for streaming training
-│   └── utils/                      
-├── model/                            
-│   ├── generation_utils.py         # Custom decoding methods (e.g., greedy, sampling)
-│   ├── load_model.py               # Wrapper to load base LLMs 
-│   ├── my_trainer.py               # HF Trainer wrapper with evaluation, metric logging, saving
-│   └── sparse_models.py            # Implements sparse attention models 
-├── eval.py                           # Runs model evaluation on test set 
-├── eval.sh                           # Shell script to run eval.py 
-├── train.py                          # Main training entrypoint: sets up tokenizer, dataset, model, trainer
-└── train.sh                          # Shell script to launch train.py 
-
+├── README.md
+├── load_data/
+│   ├── data_agent.py # Generates the memory step and the reason step naturally without order 
+│   ├── data_agent_order.py # Generate the memory step and then generate the reason step
+│   ├── k_shot_dataset.py # Wraps datasets for k-shot in-context learning 
+│   ├── preprocess.py # Converts raw datasets into question/answer + CoT step formats
+│   ├── supervised_dataset.py # Prepares dataset and collator for standard supervised fine-tuning 
+│   ├── constant_len_dataset.py # Converts dataset into fixed-length token sequences for streaming training 
+│   └── utils.py
+├── model/
+│   ├── generation_utils.py # Custom decoding methods  
+│   ├── load_model.py # Wrapper to load base LLMs 
+│   ├── my_trainer.py # HF Trainer wrapper with evaluation, metric logging, saving 
+│   └── sparse_models.py # Implements sparse attention models 
+├── eval.py # Runs model evaluation on test set 
+├── eval.sh # Shell script to run eval.py 
+├── train.py # Main training entrypoint: sets up tokenizer, dataset, model, trainer
+└── train.sh # Shell script to launch train.py
