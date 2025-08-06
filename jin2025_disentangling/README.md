@@ -20,7 +20,7 @@ The paper introduces a method to **disentangle memory (factual retrieval)** and 
 - Evaluating on QA benchmarks: **StrategyQA**, **TruthfulQA**, and **CommonsenseQA**
 
 ## Directory structure
-
+```
 .
 ├── README.md
 ├── load_data/
@@ -40,3 +40,4 @@ The paper introduces a method to **disentangle memory (factual retrieval)** and 
 ├── eval.sh # Shell script to run eval.py 
 ├── train.py # Main training entrypoint: sets up tokenizer, dataset, model, trainer
 └── train.sh # Shell script to launch train.py
+```
